@@ -1,0 +1,10 @@
+defmodule Rocketpay.Numbers do
+  def sum_from_file(filename) do
+    File.read("#{filename}.csv")
+      |> handle_file
+  end
+
+  defp handle_file({:ok, file}), do: file
+  defp handle_file({:error, _reason}), do: {:error, "File does not exist!"}
+
+end
