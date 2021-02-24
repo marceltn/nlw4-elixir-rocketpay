@@ -11,5 +11,7 @@ defmodule Rocketpay.Repo.Migrations.CreateUserTable do
 
       timestamps()
     end
+
+    create unique_index(:users, [:email])
   end
 end
