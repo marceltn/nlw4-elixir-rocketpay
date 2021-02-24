@@ -8,6 +8,8 @@ defmodule Rocketpay.Repo.Migrations.CreateUserTable do
       add :email, :string
       add :password_hash, :string
       add :nickname, :string
+
+      timestamps()
     end
   end
 end
