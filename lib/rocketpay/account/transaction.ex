@@ -22,7 +22,7 @@ defmodule Rocketpay.Accounts.Transaction do
         {:error, reason}
 
       {:ok, %{deposit: to_account, withdraw: from_account}} ->
-        {:ok, %{deposit: to_account, withdraw: from_account}}
+        {:ok, %{to_account: to_account, from_account: from_account}}
     end
   end
 end
