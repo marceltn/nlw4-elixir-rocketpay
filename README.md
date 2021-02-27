@@ -14,6 +14,12 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Rocketpay&uri=https%3A%2F%2Fgithub.com%2Fmarcelnakamine%2Fnlw4-elixir-rocketpay%2Fraw%2Fmain%2Finsomnia.json)
 
+
+## Show test cover
+```bash
+mix excoveralls.html
+```
+
 ## Learn more
 
   * Official website: https://www.phoenixframework.org/
