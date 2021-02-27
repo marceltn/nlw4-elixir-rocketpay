@@ -33,5 +33,18 @@ defmodule RocketpayWeb.AccountsControllerTest do
                "message" => "Balance changed successfully"
              } = response
     end
+
+    test "when there are invalid params, returns an error", %{conn: conn, account_id: account_id} do
+      params = %{"value" => "banana"}
+
+      response =
+        conn
+        |> post(Routes.accounts_path(conn, :deposit, account_id, params))
+        |> json_response(:bad_request)
+
+      expected_response =  %{"message" => "Invalid deposit value!"}
+
+      assert response == expected_response
+    end
   end
 end
